@@ -55,6 +55,7 @@ body {
   font-size: large;
   letter-spacing: 3px;
   line-height: 3rem;
+  opacity: 0.5;
 }
 .product-card__title {
   font-size: 2rem;
@@ -91,6 +92,9 @@ body {
   border-radius: 0.5rem;
   font-weight: 700;
 }
+.product-card__button:hover {
+  background-color: var(--green);
+}
 .product-card__button img {
   margin-right: 5px;
 }
@@ -100,4 +104,27 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media (min-width: 650px) {
+  .product-card {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .product-card__image-section,
+  .product-card__details {
+    flex: 1;
+  }
+  .product-card__image__desktop {
+    display: block;
+  }
+  .product-card__image {
+    display: none;
+  }
+  .product-card__image-section {
+    height: 100%;
+    img {
+      border-radius: 1rem 0rem 0rem 1rem;
+    }
+  }
 }
